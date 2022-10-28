@@ -10,6 +10,7 @@
 //2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 //bonus extra:
 // limitare caratteri minimi per evitare task vuote e inserimento messaggio allo svutamento della lista 
+
 const { createApp } = Vue 
 
 
