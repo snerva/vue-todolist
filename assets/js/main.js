@@ -19,7 +19,7 @@ createApp({
             tasks: [
                 {
                     text: 'Learn Html',
-                    done: true 
+                    done: true
                 },
                 {
                     text: 'Learn Css',
@@ -41,6 +41,13 @@ createApp({
             console.log(this.newTask);
             //svuotare task dopo
             this.newTask= ''
+        },
+        changeStatus(task){
+            if(task.done === true){
+                task.done = false
+            } else {
+                task.done = true
+            }
         }
     }
    
