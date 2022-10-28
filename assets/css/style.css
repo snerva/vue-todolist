@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.not_strikeOut{
+    text-decoration: none;
+}
+
+.strike_out{
+    text-decoration: line-through;
+}

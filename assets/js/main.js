@@ -9,13 +9,33 @@
 //1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 //2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 
-const {createApp} = Vue 
+const { createApp } = Vue 
 
 
 createApp({
     data() {
         return {
-
+            textDecoration: 'not_strikeOut',
+            tasks: [
+                {
+                    text: 'Learn Html',
+                    done: true 
+                },
+                {
+                    text: 'Learn Css',
+                    done: true
+                },
+                {
+                    text: 'Learn Js',
+                    done: false
+                },
+            ]
+        }
+    },
+    methods: {
+        strikeOut(){
+            console.log();
         }
     }
+   
 }).mount('#app')
