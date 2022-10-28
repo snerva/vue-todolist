@@ -3,9 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 70%;
+    margin: 4rem auto;
+}
+li{
+    font-family: cursive;
+    font-size: larger;
+}
 .strike_out{
     text-decoration: line-through;
 }
