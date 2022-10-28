@@ -10,9 +10,6 @@ body{
     font-size: large;
 }
 
-.not_strikeOut{
-    text-decoration: none;
-}
 
 .strike_out{
     text-decoration: line-through;

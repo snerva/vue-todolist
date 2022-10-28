@@ -15,7 +15,6 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            textDecoration: 'not_strikeOut',
             tasks: [
                 {
                     text: 'Learn Html',
@@ -30,11 +29,6 @@ createApp({
                     done: false
                 },
             ]
-        }
-    },
-    methods: {
-        strikeOut(){
-            console.log();
         }
     }
    

@@ -15,7 +15,7 @@
             <div class="task_list">
                 <h2 class="my-4">To Do</h2>
                 <ul>
-                    <li :class="textDecoration" v-for="(task, index) in tasks">{{task.text}}</li>
+                    <li v-for="(task, index) in tasks" :class="{strike_out: task.done}" >{{task.text}}</li>
                 </ul>
 
             </div>
