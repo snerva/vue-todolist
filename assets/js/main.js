@@ -8,7 +8,8 @@
 //Bonus:
 //1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 //2- cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
-
+//bonus extra:
+// limitare caratteri minimi per evitare task vuote e inserimento messaggio allo svutamento della lista 
 const { createApp } = Vue 
 
 
@@ -16,6 +17,7 @@ createApp({
     data() {
         return {
             newTask: '',
+            error: false,
             tasks: [
                 {
                     text: 'Learn Html',
@@ -37,10 +39,16 @@ createApp({
             this.tasks.splice(index, 1)
         },
         addTask(){
-            this.tasks.unshift({text: this.newTask})
+            if(this.newTask.length < 4){
+                this.error = true
+            } else {
+                this.error = false
+                this.tasks.unshift({text: this.newTask})
             console.log(this.newTask);
             //svuotare task dopo
             this.newTask= ''
+            }
+            
         },
         changeStatus(task){
             if(task.done === true){

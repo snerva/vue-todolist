@@ -11,19 +11,22 @@
 </head>
 <body>
     <div id="app">
-        <div class="container">
-            <div class="addTask">
+        <div class="container rounded">
+            <div class="addTask p-4">
                 <h3 class="my-4 fw-bolder">Add New Task</h3>
                 <div class="inputs d-flex">
                     <input type="text" class="form-control w-25" v-model="newTask" @keyup.enter="addTask">
-                    <button type="button" class="btn btn-primary" @click="addTask">Add</button>
+                    <button type="button" class="task_btn text-white border border-0 rounded" @click="addTask">Add Task</button>
+                    <small class="text-secondary" v-show="error">La parola inserita deve contenere piú di 4 caratteri!</small>
                 </div>
             </div>
-            <div class="task_list py-4">
+            <hr>
+            <div class="task_list p-4">
                 <h1 class="my-4 fw-bolder">To Do</h1>
-                <ul>
-                    <li @click="changeStatus(task)" v-for="(task, index) in tasks" :class="{strike_out: task.done}" >{{task.text}}<i class="fa-solid fa-square-xmark fa-fw text-danger" @click.stop="taskDone(index)"></i></li>
+                <ul class="mb-5" v-if="tasks.length !== 0">
+                    <li @click="changeStatus(task)" v-for="(task, index) in tasks" :class="{strike_out: task.done}" >{{task.text}}<i class="fa-solid fa-square-xmark fa-fw" @click.stop="taskDone(index)"></i></li>
                 </ul>
+                <h2 class="fw-bold" v-else>You do all!</h2>
 
             </div>
         </div>
